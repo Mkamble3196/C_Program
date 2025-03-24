@@ -53,7 +53,6 @@ int main(void)
     free(destination_string);
     destination_string = NULL;
     
-    
     return(0);
 }
 
