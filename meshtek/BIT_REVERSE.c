@@ -32,7 +32,8 @@ int main(void)
 
     }
 
-    printf("\n\nAFTER Reverse:-");
+
+    printf("\nAFTER Reverse:-");
     for(i_pos = 31; i_pos >= 0 ; i_pos--)
         printf("%d", i_num >> i_pos & 1);
 
