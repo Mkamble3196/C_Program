@@ -44,7 +44,7 @@ int check_string(char* s, char *c_temp)
 
   for(int i = 0; s[i] != '\0'; i++)
   {
-  	if(s[i] == '(' || s[i] == '{' || s[i] == '[')
+    if(s[i] == '(' || s[i] == '{' || s[i] == '[')
     	  c_temp[++j] = s[i];
     else
     {
@@ -57,7 +57,6 @@ int check_string(char* s, char *c_temp)
               j--;
       else
         return 0;
-      
     }
   }
  
