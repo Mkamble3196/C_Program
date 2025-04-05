@@ -65,7 +65,7 @@ int check_string(char* s, char *c_temp)
 
 int main(void)
 {
-	char *s = NULL;
+  char *s = NULL;
   char *c_temp = NULL;
   int ret = 0;
 
