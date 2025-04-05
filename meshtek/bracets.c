@@ -43,9 +43,9 @@ int main(void)
   ret = check_string(s, c_temp);
 
   if(ret == -1)
-		printf("true\n");
+    printf("true\n");
   else
-  	printf("false\n");
+    printf("false\n");
     	
   return(0);
 }
