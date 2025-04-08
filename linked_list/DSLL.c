@@ -102,3 +102,31 @@ int insert_after(struct node* p_list, int e_data, int new_data)
 
     return(SUCCESS);
 }
+
+int insert_before(struct node* p_list, int e_data, int new_data)
+{
+    struct node* e_node = NULL;
+    struct node* p_new_node = NULL;
+
+    e_node = p_list->next;
+    while(e_node != NULL)
+    {
+        if(e_node->data == e_data)
+            break;
+        e_node = e_node->next;
+    }
+
+    if(e_node == NULL)
+        return(LIST_INVALID_DATA);
+
+    p_new_node = create_node();
+
+    p_new_node->data = new_data;
+    p_new_node->next = e_node;
+    p_new_node->prev = e_node->prev;
+    e_node->prev->next = p_new_node;
+    e_node->prev = p_new_node;
+    
+    return(SUCCESS);
+
+}
