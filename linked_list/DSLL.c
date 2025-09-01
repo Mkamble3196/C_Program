@@ -22,7 +22,7 @@ void insert_end(struct node* p_list, int new_data);
 int  insert_after(struct node* p_list, int e_data, int new_data);
 int remove_start(struct node* p_list);
 int insert_before(struct node* p_list, int e_data, int new_data); 
-
+int remove_start(struct node* p_list); 
 struct node* create_list(void)
 {
     struct node* p_list = NULL;
@@ -156,7 +156,8 @@ int insert_before(struct node* p_list, int e_data, int new_data)
 {
     struct node* e_node = NULL;
     struct node* p_new_node = NULL;
-    e_node = p_list->next; 
+    e_node = p_list->next;
+    
     while(e_node != NULL)
     {
         if(e_node->data == e_data)
@@ -182,5 +183,23 @@ int insert_before(struct node* p_list, int e_data, int new_data)
 
     return (SUCCESS); 
 
+
+}
+
+int remove_start(struct node* p_list)
+{
+    struct node* first_node = NULL;
+    if(p_list->next == NULL && p_list->prev == NULL)
+        return(LIST_EMPTY);
+    first_node = p_list->next;
+    first_node->prev->next = first_node->next;
+
+    if(first_node->next != NULL)
+        first_node->next->prev = first_node->prev;
+
+    free(first_node);
+    first_node = NULL;
+
+    return(SUCCESS);
 
 }
