@@ -21,7 +21,7 @@ int main(void)
     printf("\nAfter\n");
     for(int i = 31; i >=0 ; i--)
     {
-        printf("%d", ((val >> i )& 1));
+        printf("%d", (val >> i& 1));
     }
 
     printf("\nafter resetting bits results is %d\n",val);

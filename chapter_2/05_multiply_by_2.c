@@ -1,5 +1,5 @@
 /*
-    Wrrite a  C program to multiply a given number with 2^n, without using a multiplication operator. The Value of n will be 
+    Write a  C program to multiply a given number with 2^n, without using a multiplication operator. The Value of n will be 
     entered by the user
 
     1. start
