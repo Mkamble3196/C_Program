@@ -92,6 +92,15 @@ size_t my_strlen(char* str)
     return(length);
 }
 
+/*
+size_t my_strlen(char* str)
+{
+    size_t length = 0;
+    
+
+}
+*/
+
 size_t my_min(size_t a, size_t b)
 {
     if (a < b)

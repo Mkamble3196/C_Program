@@ -23,6 +23,8 @@ int  insert_after(struct node* p_list, int e_data, int new_data);
 int remove_start(struct node* p_list);
 int insert_before(struct node* p_list, int e_data, int new_data); 
 int remove_start(struct node* p_list); 
+
+
 struct node* create_list(void)
 {
     struct node* p_list = NULL;
